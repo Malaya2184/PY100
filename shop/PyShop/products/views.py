@@ -8,7 +8,7 @@ from .models import Offers
 def index(request):
     products = Product.objects.all()
     # return HttpResponse("hello world")
-    return render(request, 'index.html')
+    return render(request, 'index.html', {'products': products})
 
 def new(request):
     return HttpResponse('new add')

@@ -12,3 +12,19 @@ board = [
 ]
 # print(np.matrix(board))
 # print(len(board))
+def print_board(bo):
+    
+    for i in range(len(bo)):
+        if i % 3 == 0 and  i !=0:
+            print('- - - - - - - - - - -')
+        
+        for  j in range(len(bo)):
+            if j % 3 == 0 and j !=0:
+                print('|', end = ' ')
+            if j == 8:
+                print(bo[i][j])
+            else:
+                print(bo[i][j], end= ' ')
+                
+                
+print_board(board)

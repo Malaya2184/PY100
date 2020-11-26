@@ -37,6 +37,14 @@ class LinkedList:
         else:
               temp= self.head
               self.head= self.head.next
+
+# deletion of the last node
+  # def deletelastnode(self):
+  #       current = self.head
+  #       while current.next is not None:
+  #             current = current.next
+  #       current.data = current.next
+        
 # Singly Linked List with insertion and print methods
 
 L = LinkedList()
@@ -54,3 +62,5 @@ L.printLL()
 # deletion of the first node from the linkedlist
 L.deletefirstnode()
 L.printLL()
+# L.deletelastnode()
+# L.printLL()

@@ -53,18 +53,31 @@ class LinkedList:
           current = self.head
           while current.data != value:
                 if current.next is None:
-                      print("not found")
+                      print("opps not found, better luck next time")
                       break
                 else:
                       current= current.next
           if current.data == value:
                 print("yepee found it")
+# counting the number of nodes
+  def countnodes(self):
+        current= self.head
+        count = 0
+        if self.head is not None:
+          while current.next is not None:
+                count += 1
+                current= current.next
+        else:
+              return 0
+        return count+1
 
         
 # Singly Linked List with insertion and print methods
 
 L = LinkedList()
 L.printLL()
+# counting the number of nodes when there is no nodes
+print("there are ",L.countnodes(),"number of nodes in this linked list")
 # searching of a node when there is no node
 L.searchnode(4)
 # deletion of a node from the linked list where there is no node
@@ -84,7 +97,10 @@ L.printLL()
 L.deletelastnode()
 L.printLL()
 # searching of a node in the linked list
-L.searchnode(4)
+L.searchnode(15)
 L.insert(15)
+# searching of the node
 L.searchnode(15)
 L.printLL()
+# counting the number of nodes in tghe linked list
+print("there are ",L.countnodes(),"number of nodes in this linked list")

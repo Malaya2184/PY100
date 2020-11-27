@@ -70,6 +70,19 @@ class LinkedList:
         else:
               return 0
         return count+1
+# sorting of element in the linked list
+  def sortlinkedlist(self):
+        current = self.head
+        LinkedListList = []
+        if current is not None:
+          while current is not None:
+                LinkedListList.append(current.data)
+                current= current.next
+          print(LinkedListList)
+          LinkedListList.sort()
+          print(LinkedListList)
+        else:
+              print("There is nothing to sort")
 
         
 # Singly Linked List with insertion and print methods
@@ -82,6 +95,8 @@ print("there are ",L.countnodes(),"number of nodes in this linked list")
 L.searchnode(4)
 # deletion of a node from the linked list where there is no node
 L.deletefirstnode()
+# sorting of linked list when therwe is no node
+L.sortlinkedlist()
 L.printLL()
 # insertion in to the single linked list
 L.insert(3)
@@ -104,3 +119,7 @@ L.searchnode(15)
 L.printLL()
 # counting the number of nodes in tghe linked list
 print("there are ",L.countnodes(),"number of nodes in this linked list")
+# inserted anathor element
+L.insert(2)
+# sorting of linlkedlist
+L.sortlinkedlist()

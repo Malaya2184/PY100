@@ -80,7 +80,7 @@ class LinkedList:
                 current= current.next
           print(LinkedListList)
           LinkedListList.sort()
-          print(LinkedListList)
+          return LinkedListList
         else:
               print("There is nothing to sort")
 
@@ -96,7 +96,7 @@ L.searchnode(4)
 # deletion of a node from the linked list where there is no node
 L.deletefirstnode()
 # sorting of linked list when therwe is no node
-L.sortlinkedlist()
+print(L.sortlinkedlist())
 L.printLL()
 # insertion in to the single linked list
 L.insert(3)
@@ -122,4 +122,4 @@ print("there are ",L.countnodes(),"number of nodes in this linked list")
 # inserted anathor element
 L.insert(2)
 # sorting of linlkedlist
-L.sortlinkedlist()
+print(L.sortlinkedlist())

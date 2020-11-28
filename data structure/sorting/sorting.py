@@ -26,8 +26,23 @@ def quick_short(list):
             pivot_smaller.append(i)
     return quick_short(pivot_smaller) + [pivot] + quick_short(pivot_grearer)
 
+# Bubble sort algorithm
+def bubble_sort(list):
+    iteration_length = len(list) - 1
+    sorted = False
+
+    while not sorted:
+        sorted = True
+
+        for i in range(iteration_length):
+            if list[i] > list[i+1]:
+                sorted = False
+                list[i], list[i+1] = list[i+1], list[i]
+
+    return list
 
 #####################################################################
-list = [3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]
-print(selection_sort(list))
-print(quick_short(list))
+# list = [3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]
+print(selection_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
+print(quick_short([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
+print(bubble_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))

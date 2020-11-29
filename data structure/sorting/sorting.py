@@ -83,6 +83,20 @@ def merge_two_sorted_list(list1, list2):
         j += 1
     return sorted_list
 
+
+    # merge sort algo (which will be a recurssive function )
+def merge_two_unsorted_list(list):
+    if len(list) <= 1:
+        return list
+    mid = len(list)//2
+    left = list[:mid]
+    right = list[mid:]
+
+    left = merge_two_unsorted_list(left)
+    right = merge_two_unsorted_list(right)
+
+    return merge_two_sorted_list(left,right)
+
 #####################################################################
 # list = [3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]
 print(selection_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
@@ -90,3 +104,4 @@ print(quick_short([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
 print(bubble_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
 print(insertion_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
 print(merge_two_sorted_list([3, 4, 5, 5, 7, 8, 31, 67],[0, 1, 2, 2, 3, 90, 567]))
+print(merge_two_unsorted_list([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))

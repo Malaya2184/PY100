@@ -56,9 +56,37 @@ def insertion_sort(list):
     
     return list
 
+# Merge sort algoruthm
+    # merge sort for two sorted array
+
+def merge_two_sorted_list(list1, list2):
+    sorted_list= []
+    i =0
+    j =0
+    while i< len(list1) and j< len(list2):
+        if list1[i] < list2[j]:
+            sorted_list.append(list1[i])
+            i += 1
+
+        else:
+            sorted_list.append(list2[j])
+            j += 1
+
+    #these two loops added for the iteration when one of the list iteration terminated
+
+
+    while i < len(list1):
+        sorted_list.append(list1[i])
+        i += 1
+    while j < len(list2):
+        sorted_list.append(list2[j])
+        j += 1
+    return sorted_list
+
 #####################################################################
 # list = [3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]
 print(selection_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
 print(quick_short([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
 print(bubble_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
 print(insertion_sort([3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]))
+print(merge_two_sorted_list([3, 4, 5, 5, 7, 8, 31, 67],[0, 1, 2, 2, 3, 90, 567]))

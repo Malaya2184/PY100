@@ -99,38 +99,33 @@ def merge_two_unsorted_list(list):
 
 # ####################################################################
 # *********heap sort algorithm using min-hip***********
-# def max_heap(list):
-#     p_node = int(len(list)//2)-1
+# def max_heap(list, p_node):
 
 #     while p_node >= 0:
 #         left_node = 2*p_node + 1
 #         right_node = 2*p_node + 2
 #         if list[left_node] > list[right_node] and list[left_node] > list[p_node]:
 #             list[p_node], list[left_node] = list[left_node], list[p_node]
-#             p_node = p_node-1
+#             # p_node = p_node-1
 
 #         elif list[right_node] > list[left_node] and list[right_node] > list[p_node]:
 #             list[p_node], list[right_node] = list[right_node], list[p_node]
-#             p_node = p_node-1
-
-#         else :
-#             p_node = p_node-1
-
-#     return list
+#             # p_node = p_node-1
 
 # # heap sort algo
-# def heap_sort(list):
+# def heap_sort(list,p_node):
 #     length_of_list = int(len(list))-1
+#     for i in range(p_node,-1,-1):
+#         max_heap(list,p_node)
 #     for i in range(length_of_list,-1,-1):
 #         list[length_of_list], list[0] = list[0], list[length_of_list]
-#         max_heap(list)
 #     return list
             
 
 
 # list = [33,35,42,10,7,8,14,19,48]
-# print(max_heap(list))
-# print(heap_sort(list))
+# p_node = int(len(list)//2)-1
+# print(heap_sort(list,p_node))
 
 #####################################################################
 # list = [3,4,5,1,2,3,0,7,8,90,67,31,2,5,567]

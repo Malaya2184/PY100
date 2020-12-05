@@ -2,7 +2,7 @@ import os
 import random
 
 for i in range(1,200):
-	n= random.randint(60,500)
+	n= random.randint(10,200)
 	if n>60:
 		d = str(n) + 'days ago'
 		with open('fun.txt', 'a') as file:

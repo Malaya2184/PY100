@@ -1,0 +1,164 @@
+body{
+    padding: 0px;
+    margin: 0px auto;
+    background-color: rgb(238, 237, 200);
+    
+}
+.container_1{
+    box-sizing: border-box;
+    margin: 40px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+   
+
+}
+.container_2{
+    box-sizing: border-box;
+    margin: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-self: center;
+   
+}
+.boxes{
+    padding: 10px;
+    position: relative;
+    margin:10px;
+    background-color:lightgray;
+    border-style: outset;
+    width:180px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    justify-content: center;
+    justify-items: center;
+    
+}   
+    
+.details{
+    color: rgb(20, 20, 20);
+    margin-right: px;
+    font-style: bold;
+    text-align: center;
+    font-size: medium;
+    margin-left: px;
+    margin-top: 10px;
+}
+.img{
+    margin: auto;
+    margin-top: 20px;
+    height: 70px;
+    width: 60px;
+    border-radius: 50%;
+    object-position: center;
+    display: flex;
+    justify-content:space-around;
+    
+    align-items: flex-end;
+    object-fit: cover;
+}    
+
+
+.name{
+    color: rgba(28, 4, 48, 0.945);
+    margin-top: 0px;
+    font-size: 17px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+}
+#degn{
+    color: rgb(29, 26, 24);
+    font-size: 18px;
+}
+h1{
+    color: rgb(22, 39, 3);
+    text-align: center;
+}
+img{
+    padding: 10px;
+    margin: auto;
+    width: 150px;
+    height: 50px;
+    object-position: center;
+    object-fit: contain;
+    align-items: center;
+}
+h2{
+   padding: 0px;
+    text-transform: capitalize;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+    color: rgb(5, 76, 85);
+
+}
+.about{
+    padding: 0px;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+    color: rgb(104, 50, 12);
+}
+.box{
+    margin: 0px;
+    width:350px;
+    border-radius: 80px;
+    padding: 7px;
+    padding-left: 10px;
+    border-color: rgb(82, 41, 12);
+    
+    text-transform: capitalize;
+    font-style: italic;
+   
+
+}
+.data_img{
+    height: 400px;
+    width: 1000px;
+    align-content: center;
+}
+.logos{
+    background-color: rgb(115, 119, 119);
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    text-justify: auto;
+    
+}
+.logo1head{
+display: flex;
+justify-content: center;
+}
+.logo2head{
+display: flex;
+justify-content: center;
+}
+h3{
+    padding: 10px;
+    margin: 10px;
+    
+}
+.algo{
+    margin: 10px;
+   
+    color: rgb(68, 41, 6);
+    
+}
+.data{
+    margin: 10%;
+    font-size: 22px;
+}
+.compare{
+   margin-left: 7%;
+    text-transform: uppercase;
+    font-size: 22px;
+}

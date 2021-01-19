@@ -47,7 +47,7 @@ for line in annotation_FileHandle:
         information_list = line.split()
         if information_list[2] == 'CDS' and int(information_list[3])== 21563 :
             if int(information_list[3])< 25385 :
-                codingSequences = genome_sequence_string[int(information_list[3])+1:int(information_list[4])+2]
+                codingSequences = genome_sequence_string[int(information_list[3])-1:int(information_list[4])]
                 Protein_sequence = DNA_translation(codingSequences)
                 new_string += Protein_sequence
 
@@ -58,8 +58,9 @@ for element in spike_list:
     new_string2 +=element
 
 spike_list2 = list(new_string2)
-
+# print(spike_list2[500])
 if spike_list2[500] == "N":  spike_list2[500] = "Y"
+# print(spike_list2[500])
 if spike_list2[569] == "A":  spike_list2[569] = "D"
 if spike_list2[613] == "D":  spike_list2[613] = "G"
 if spike_list2[680] == "P":  spike_list2[680] = "H"

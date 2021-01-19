@@ -1,6 +1,6 @@
 # function used to translate to aminoacid from DNA sequence
 def DNA_translation(codingSequences):
-    stop_codons ={  'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
+    codon_table ={  'TTT':'F','TTC':'F','TTA':'L','TTG':'L',
                     'CTT':'L','CTC':'L','CTA':'L','CTG':'L',
                     'ATT':'I','ATC':'I','ATA':'I','ATG':'M',
                     'GTT':'V','GTC':'V','GTA':'V','GTG':'V',
@@ -18,7 +18,7 @@ def DNA_translation(codingSequences):
                     'GGT':'G','GGC':'G','GGA':'G','GGG':'G'}
     Protein_sequence = ""
     for i in range(0,len(codingSequences),3):
-        Protein_sequence += stop_codons[codingSequences[i:i+3]]
+        Protein_sequence += codon_table[codingSequences[i:i+3]]
     return Protein_sequence
 
 # Filehandling
@@ -45,7 +45,7 @@ for line in annotation_FileHandle:
         Protein_sequence = ""
         information_list = line.split()
         if information_list[2] == 'CDS':
-            codingSequences = genome_sequence_string[int(information_list[3])+1:int(information_list[4])+2]
+            codingSequences = genome_sequence_string[int(information_list[3])-1:int(information_list[4])]
             Protein_sequence = DNA_translation(codingSequences)
 
             prot_id = information_list[8].split(";") #ProtID of the protein

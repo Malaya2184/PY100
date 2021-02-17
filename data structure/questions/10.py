@@ -1,5 +1,5 @@
-str = "malayamalayarrrrrrrrrrrmalayaxxmalaya"
-pattern = "malaya"
+# str = "malayamalayarrrrrrrrrrrmalayaxxmalaya"
+# pattern = "malaya"
 
 
 def countfreq(str, pattern):
@@ -24,3 +24,21 @@ def countfreq(str, pattern):
 
 
 print(countfreq(str, pattern))
+
+# id_in_func = {
+#     1:'one',
+#     2:'two',
+#     3:'three',
+#     4:'four',
+#     5:'five',
+#     6:'six',
+#     7: 'seven',
+#     8: 'eight',
+#     9: 'nine',
+#     10: 'ten'
+# }
+# ids_to_be_deleted = [1,3,4]
+# for i in ids_to_be_deleted:
+#     del id_in_func[i]
+
+# print(id_in_func)

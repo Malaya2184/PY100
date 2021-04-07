@@ -2,8 +2,8 @@ import os
 import random
 
 for i in range(1,200):
-	n= random.randint(10,200)
-	if n>60:
+	n= random.randint(2,60)
+	if n>1:
 		d = str(n) + 'days ago'
 		with open('fun.txt', 'a') as file:
 			file.write(d+'\n')

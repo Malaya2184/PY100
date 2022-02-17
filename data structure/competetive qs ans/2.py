@@ -8,7 +8,7 @@
 # Sell stock on 7th day (695)
 
 
-priceOfStock = [100, 180, 260, 310, 40, 535, 695]
+priceOfStock = [100, 180, 260, 310, 40, 535, 695, 10, 100, 1000]
 
 i = 0
 def buyStock(i,priceOfStock):

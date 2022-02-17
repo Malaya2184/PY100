@@ -20,11 +20,11 @@ def buyStock(i,priceOfStock):
                 if i < len(priceOfStock):
                     # print(i)
                     sellStock(i, priceOfStock)
+                    break
                 else:
                     break
     
 def sellStock(i, priceOfStock):
-
     if i < len(priceOfStock):
         for x in range(i,len(priceOfStock)):
             if x == len(priceOfStock)-1:
@@ -33,9 +33,8 @@ def sellStock(i, priceOfStock):
                 print("sell stock in day", x+1, "at price", priceOfStock[x])
                 i = x+1
                 if i < len(priceOfStock):
-                    print("buy fun callled at index", i)
                     buyStock(i,priceOfStock)
-                
+                    break
 
 buyStock(i,priceOfStock)
         

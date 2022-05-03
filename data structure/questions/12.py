@@ -2,6 +2,9 @@
 
 #  selection sort
 
+from ast import If
+
+
 myarr = [11,22,32,2,34,98,56]
 
 def selectionSort(arr):
@@ -49,10 +52,41 @@ def quickSort(arr):
                 pivot_smaller.append(i)
                 
         return quickSort(pivot_smaller) + [pivot] + quickSort(pivot_greater)   
+    
+def insertationSort(arr):
+    for i in range(len(arr)):
+        while arr[i-1]>arr[i] and i!=0:
+            arr[i-1],arr[i]=arr[i],arr[i-1]
+            i-=1
+            
+    return arr
+    
+# sorting using one loop
+# TODO: HAS NOT WORKED YET
+def sortUsingOneloop(arr):
+    i=0
+    newloop=True
+    
+    while(i!=len(arr)-1):
+
+        if(newloop):
+            j=i+1
+            newloop=False
+        elif(j<len(arr) and arr[i]>arr[j]):
+            arr[i],arr[j]=arr[j],arr[i]
+            j+=1
+        elif(j<len(arr) and arr[i]<arr[j]):
+            j+=1
+        else:
+            i+=1
+            newloop=True
+            
+    return arr
         
         
 print("selection sort---> ",selectionSort([11,22,32,2,34,98,56]))
 print("bubble sort---> ",bubbleSort([11,22,32,2,34,98,56]))
 print("bubble new sort---> ",bubbleSortNew([11,22,32,2,34,98,56]))
 print("quick sort---> ",quickSort([11,22,32,2,34,98,56]))
-                
+print("insertation sort---> ",insertationSort([11,22,32,2,34,98,56]))
+print("sortUsingOneloop sort---> ",sortUsingOneloop([11,22,32,2,34,98,56]))

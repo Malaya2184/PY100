@@ -82,6 +82,58 @@ def sortUsingOneloop(arr):
             newloop=True
             
     return arr
+
+def sortOneloop(arr):
+    i = 0
+    newloop = True
+    
+    while(i<len(arr)-1):
+        if(newloop):
+            j=i+1
+            newloop = False
+        elif (j<len(arr) and arr[j]<arr[i]):
+            arr[i],arr[j]=arr[j],arr[i]
+            j+=1
+        elif(j == len(arr)):
+            i+=1
+            newloop=True
+        else:
+            j+=1
+    return arr
+
+def mergeSort(arr):
+    if(len(arr)==1):
+        return arr
+    elif (len(arr)>1):
+        mid = len(arr)//2
+        left = arr[:mid]
+        right = arr[mid:]
+        left=mergeSort(left)
+        right=mergeSort(right)
+        
+    i=0
+    j=0
+    sortedArr = []
+    while i+j != len(left)+len(right):
+        if i<len(left) and j<len(right) and left[i] < right[j]:
+            sortedArr.append(left[i])
+            i += 1
+
+        elif i<len(left) and j<len(right) and left[i] > right[j]:
+            sortedArr.append(right[j])
+            j += 1
+        elif(i==len(left)):
+            sortedArr.extend(right[j:])
+            j = len(right)
+        elif(j==len(right)):
+            sortedArr.extend(left[i:])
+            i=len(left)
+            
+    return sortedArr
+   
+        
+        
+
         
         
 print("selection sort---> ",selectionSort([11,22,32,2,34,98,56]))
@@ -90,3 +142,5 @@ print("bubble new sort---> ",bubbleSortNew([11,22,32,2,34,98,56]))
 print("quick sort---> ",quickSort([11,22,32,2,34,98,56]))
 print("insertation sort---> ",insertationSort([11,22,32,2,34,98,56]))
 print("sortUsingOneloop sort---> ",sortUsingOneloop([11,22,32,2,34,98,56]))
+print("sortOneloop sort---> ",sortOneloop([11,22,32,2,34,98,56]))
+print("mergeSort sort---> ",mergeSort([11,22,32,2,34,98,56,100]))

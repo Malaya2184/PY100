@@ -9,11 +9,11 @@ def max_heap(arr,p):
             parent = (i+1)//2-1
             
             while arr[parent] < arr[child] and child !=0:
-                if arr[child]> arr[parent]:
-                    arr[child], arr[parent] = arr[parent], arr[child]
+                
+                arr[child], arr[parent] = arr[parent], arr[child]
 
-                    child = parent
-                    parent = (parent+1)//2 - 1  
+                child = parent
+                parent = (parent+1)//2 - 1  
 
 def heapsort(arr):
     for i in range(len(arr)):

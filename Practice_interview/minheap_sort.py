@@ -1,6 +1,6 @@
 arr = [3,4,5,1,2,3,7,8,90,67,31,2,5,567]
 
-# inheap_sort will lead the array to descending order 
+# inheap_sort will lead the array to descending order using min heap
 def minheap(arr,p):
     for i in range(len(arr)-p):
         if i > 0:

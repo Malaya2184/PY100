@@ -5,6 +5,7 @@ class node:
 class linkedList:
     def __init__(self):
         self.head = None
+        
     def insertNode(self, data):
         newNode = node(data)
         if self.head == None:
@@ -14,18 +15,20 @@ class linkedList:
             while current.next is not None:
                 current = current.next
             current.next = newNode
+            
     def insertMultipleNode(self, arr):
         for i in arr:
             self.insertNode(i)
     def printLL(self):
         if self.head == None:
-            return 'there is no linkedlist created'
+            return print('there is no linkedlist created')
         else:
             current = self.head
             while current.next is not None:
                 print(current.data, end='--->')
                 current = current.next
             print(current.data,'--->',current.next)
+            
     def deleteLastNode(self):
         if self.head is None:
             return(print("no linkedlist present"))
@@ -38,6 +41,7 @@ class linkedList:
                 prev = current
                 current = current.next
             prev.next = None
+            
     def deleteFirstNode(self):
         if self.head is None:
             return(print("no linkedlist present"))
@@ -48,6 +52,7 @@ class linkedList:
             current = self.head
             if current.next is not None:
                 self.head = current.next
+                
     def lengthOfLL(self):
         current = self.head
         count = 0
@@ -58,6 +63,7 @@ class linkedList:
                 count+=1
                 current = current.next
             return(print('length of linked list is :', count+1))
+        
     def sortLinkedListUsingArray(self):
  
         current = self.head
@@ -69,7 +75,19 @@ class linkedList:
         myarr.sort()
         self.head= None
         self.insertMultipleNode(myarr)
-
+        
+    def reverseLL(self):
+        current = self.head
+        prev = None
+        while current.next is not None:
+            right = current.next
+            current.next = prev
+            prev = current
+            current = right
+        current.next = prev
+        self.head = current
+            
+        
             
 l = linkedList()
 l.insertNode(5)
@@ -89,3 +107,5 @@ l.lengthOfLL()
 l.sortLinkedListUsingArray()
 l.printLL()
 l.lengthOfLL()
+l.reverseLL()
+l.printLL()

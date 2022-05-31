@@ -38,12 +38,14 @@ class bst:
 bst = bst()
 bst.insertNode(5)
 bst.insertNode(10)
+bst.insertNode(8)
 bst.insertNode(15)
 bst.insertNode(2)
 current = bst.head
 print(current.data)
 print(current.right.data)
 print(current.right.right.data)
+print(current.right.left.data)
 print(current.left.data)
 
     

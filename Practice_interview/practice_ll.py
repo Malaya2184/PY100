@@ -97,6 +97,16 @@ class linkedList:
             doubleStep = doubleStep. next.next
         
         return(singleStep.data)
+    def deleteMidOfLL(self):
+        singleStep = self.head
+        doubleStep = self.head
+        
+        while doubleStep is not None and doubleStep.next is not  None:
+            prev = singleStep
+            singleStep = singleStep.next
+            doubleStep = doubleStep.next.next
+        
+        prev.next = singleStep.next
             
         
             
@@ -122,3 +132,5 @@ l.reverseLL()
 l.insertNode(1)
 l.printLL()
 print(l.printMiddleOfLL())
+l.deleteMidOfLL()
+l.printLL()

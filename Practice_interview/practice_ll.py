@@ -19,6 +19,7 @@ class linkedList:
     def insertMultipleNode(self, arr):
         for i in arr:
             self.insertNode(i)
+            
     def printLL(self):
         if self.head == None:
             return print('there is no linkedlist created')
@@ -86,6 +87,16 @@ class linkedList:
             current = right
         current.next = prev
         self.head = current
+        
+    def printMiddleOfLL(self):
+        singleStep = self.head
+        doubleStep = self.head
+        
+        while doubleStep is not None and doubleStep.next is not  None:
+            singleStep = singleStep.next
+            doubleStep = doubleStep. next.next
+        
+        return(singleStep.data)
             
         
             
@@ -108,4 +119,6 @@ l.sortLinkedListUsingArray()
 l.printLL()
 l.lengthOfLL()
 l.reverseLL()
+l.insertNode(1)
 l.printLL()
+print(l.printMiddleOfLL())

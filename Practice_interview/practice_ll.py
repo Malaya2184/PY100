@@ -1,3 +1,6 @@
+from requests import delete
+
+
 class node:
     def __init__(self, data, next = None):
         self.data = data
@@ -26,9 +29,16 @@ class linkedList:
                 print(current.data, end='--->')
                 current = current.next
             print(current.data,'--->',current.next)
-            
+    def deleteLastNode(self):
+        current = self.head
+        while current.next is not None:
+            prev = current
+            current = current.next
+        prev.next = None
 l = linkedList()
 l.insertNode(5)
 l.printLL()
 l.insertMultipleNode([7,8,15])
+l.printLL()
+l.deleteLastNode()
 l.printLL()

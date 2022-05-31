@@ -14,6 +14,9 @@ class linkedList:
             while current.next is not None:
                 current = current.next
             current.next = newNode
+    def insertMultipleNode(self, arr):
+        for i in arr:
+            self.insertNode(i)
     def printLL(self):
         if self.head == None:
             return 'there is no linkedlist created'
@@ -27,7 +30,5 @@ class linkedList:
 l = linkedList()
 l.insertNode(5)
 l.printLL()
-l.insertNode(7)
-l.insertNode(8)
-l.insertNode(15)
+l.insertMultipleNode([7,8,15])
 l.printLL()

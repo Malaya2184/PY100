@@ -121,4 +121,5 @@ l.lengthOfLL()
 l.reverseLL()
 l.insertNode(1)
 l.printLL()
+
 print(l.printMiddleOfLL())

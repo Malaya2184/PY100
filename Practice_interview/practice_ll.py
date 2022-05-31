@@ -58,7 +58,7 @@ class linkedList:
                 count+=1
                 current = current.next
             return(print('length of linked list is :', count+1))
-    def sortLinkedList(self):
+    def sortLinkedListUsingArray(self):
  
         current = self.head
         myarr = []
@@ -68,7 +68,7 @@ class linkedList:
         myarr.append(current.data)
         myarr.sort()
         self.head= None
-        self.insertMultipleNode(myarr)    
+        self.insertMultipleNode(myarr)
 
             
 l = linkedList()
@@ -86,6 +86,6 @@ l.lengthOfLL()
 l.insertMultipleNode([25,3,5])
 l.printLL()
 l.lengthOfLL()
-l.sortLinkedList()
+l.sortLinkedListUsingArray()
 l.printLL()
 l.lengthOfLL()

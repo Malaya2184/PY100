@@ -1,7 +1,3 @@
-
-from pandas import pivot
-
-
 arr = [15,17,1,2,3,99,86,75,89]
 
 #  selection sort

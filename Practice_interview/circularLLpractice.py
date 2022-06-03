@@ -33,16 +33,30 @@ class circularLL:
             current = current.next
         print(current.data)
         
-    # def reverseCLL(self):
+    def reverseCLL(self):
         
-    #     head = self.head
-    #     tail = self.tail
+        head = self.head
+        tail = self.tail
         
-    #     if head == tail:
-    #         return
-    #     else:
-    #         while head.next is not tail:
-                
+        if head == tail:
+            return
+        else:
+            count = 0
+            while head.next is not tail:
+                count+=1
+                if count ==1:
+                    prev = head
+                    next = head.next
+                    head.next = self.tail
+                    self.tail = head
+                    self.head = head.next
+                    head = next
+                else:
+                    prev = head
+                    next = head.next
+                    head.next = prev
+                    head = next
+            tail.next = head
             
         
 c = circularLL()
@@ -52,4 +66,7 @@ c.insertNode(2)
 c.insertNode(3)
 c.insertNode(4)
 c.insertNode(5)
+c.insertNode(6)
+c.printCLL()
+c.reverseCLL()
 c.printCLL()

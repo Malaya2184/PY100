@@ -43,20 +43,34 @@ class circularLL:
         else:
             count = 0
             while head.next is not tail:
-                count+=1
+                count +=1
                 if count ==1:
-                    prev = head
                     next = head.next
-                    head.next = self.tail
-                    self.tail = head
-                    self.head = head.next
+                    prev = head
+                    head.next = tail
+                    newtail = head
                     head = next
                 else:
-                    prev = head
                     next = head.next
                     head.next = prev
+                    prev = head
                     head = next
-            tail.next = head
+            if count is not 0:
+                next = head.next
+                head.next = prev
+                prev = head
+                tail.next = prev
+                self.head = tail
+                self.tail = newtail
+            else:
+                head.next = tail
+                self.tail.next = head
+                self.head = tail
+                self.tail = head          
+                    
+               
+            
+                  
             
         
 c = circularLL()

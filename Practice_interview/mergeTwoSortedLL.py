@@ -60,13 +60,13 @@ def mergeTwoSortedLL(l, l2):
                     l3.insertNode(current2.data)
                     current2 = current2.next
                 l3.insertNode(current2.data)
-    else:
-            if current2.data < current1.data:
-                l3.insertNode(current2.data)
-                while current1.next is not None:
-                    l3.insertNode(current1.data)
-                    current1 = current1.next
-                l3.insertNode(current1.data)
+    # else:
+    #         if current2.data < current1.data:
+    #             l3.insertNode(current2.data)
+    #             while current1.next is not None:
+    #                 l3.insertNode(current1.data)
+    #                 current1 = current1.next
+    #             l3.insertNode(current1.data)
     return l3
         
     
@@ -91,8 +91,8 @@ l2.insertNode(9)
 l2.insertNode(18)
 l2.insertNode(11)
 l2.insertNode(15)
-l2.insertNode(1)
-l2.insertNode(8)
+# l2.insertNode(1)
+# l2.insertNode(8)
 l2.sortLL()
 l2.printLL()
 mergeTwoSortedLL(l,l2).printLL()

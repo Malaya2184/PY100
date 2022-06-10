@@ -43,31 +43,7 @@ def mergeTwoSortedLL(l, l2):
     current2 = l2.head
     l3 = linkedList()
     
-    while current1.next is not  None and current2.next is not None:
-        if current1.data < current2.data:
-            l3.insertNode(current1.data)
-            current1 = current1.next
-            current2 = current2
-        else:
-            l3.insertNode(current2.data)
-            current2 = current2.next
-            current1 = current1
-            
-    if current1.next is None:
-            if current1.data < current2.data:
-                l3.insertNode(current1.data)
-                while current2.next is not None:
-                    l3.insertNode(current2.data)
-                    current2 = current2.next
-                l3.insertNode(current2.data)
-    # else:
-    #         if current2.data < current1.data:
-    #             l3.insertNode(current2.data)
-    #             while current1.next is not None:
-    #                 l3.insertNode(current1.data)
-    #                 current1 = current1.next
-    #             l3.insertNode(current1.data)
-    return l3
+        
         
     
     

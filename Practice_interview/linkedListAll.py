@@ -107,6 +107,37 @@ class linkedList:
             doubleStep = doubleStep.next.next
         
         prev.next = singleStep.next
+        
+        
+# function outside the class
+def mergeTwoSortedLL(l, l2):
+    
+    current1 = l.head
+    current2 = l2.head
+    l3 = linkedList()
+    
+    while current1 is not None and current2 is not None:
+        
+        if current1.data < current2.data:
+            l3.insertNode(current1.data)
+            current1 = current1.next
+        else:
+            l3.insertNode(current2.data)
+            current2 = current2.next
+            
+    if current1 is None:
+        
+        while current2.next is not None:
+            l3.insertNode(current2.data)
+            current2 = current2.next
+        l3.insertNode(current2.data)
+    else:
+        while current1.next is not None:
+            l3.insertNode(current1.data)
+            current1 = current1.next
+        l3.insertNode(current1.data)
+        
+    return l3
             
         
             
@@ -134,3 +165,15 @@ l.printLL()
 print(l.printMiddleOfLL())
 l.deleteMidOfLL()
 l.printLL()
+l.sortLinkedListUsingArray()
+l.printLL()
+l2 = linkedList()
+l2.insertNode(9)
+l2.insertNode(18)
+l2.insertNode(11)
+l2.insertNode(15)
+l2.insertNode(1)
+l2.insertNode(8)
+l2.sortLinkedListUsingArray()
+l2.printLL()
+mergeTwoSortedLL(l,l2).printLL()

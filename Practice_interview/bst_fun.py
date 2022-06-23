@@ -35,31 +35,36 @@ class BinarySearchTree:
                          current = current.left
                          
                          
-                         
-    # def printBst(self,head):
+# printing level by level in bst
+    def printBst(self,head):
         
-    #     current = head
-    #     if current == self.head:
-    #         print(current.data)
-    #     while current.left is not None and current.right is not None:
-    #         if current.left is not None:
-    #             print(current.left.data)
-    #         if current.right is not None:
-    #             print(current.right.data)
+        current = head
+        if current == self.head:
+            print(current.data)
+        elif head is None:
+            return
+
+        if current.left is not None or current.right is not None:
+            if current.left is not None:
+                print(current.left.data)
+            if current.right is not None:
+                print(current.right.data)
             
-    #     left = self.printBst(current.left)
-    #     right = self.printBst(current.right)
+        left = self.printBst(current.left)
+        right = self.printBst(current.right)
         
         
 b = BinarySearchTree()
 b.insertNode(5)
-b.insertNode(4)
+b.insertNode(3)
 b.insertNode(7)
 b.insertNode(2)
 b.insertNode(4)
 b.insertNode(6)
 b.insertNode(8)
-# print(b.head.data)
+b.insertNode(9)
+b.insertNode(1)
+print(b.head.data)
 b.printBst(b.head)
             
                      

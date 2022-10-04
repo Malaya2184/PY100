@@ -1,3 +1,6 @@
+from enum import unique
+
+
 arr = [12,1,2,3,4,5,6,7,8,9,8,5,4,3,21]
 myDic = {}
 noRepeat = []

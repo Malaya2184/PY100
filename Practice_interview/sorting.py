@@ -9,7 +9,6 @@ def selectionSort(arr):
     return arr
 
 # bubble sort
-
 def bubbleSort(arr):
     sorted = False
     
